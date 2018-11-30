@@ -134,6 +134,7 @@ public class RoundRobin {
 		for (Job job : jobs) {
 			System.out.println("The CPU time for " + job.getJobName() + " is " + cpuTime[i]);
 			System.out.println("The IO time for " + job.getJobName() + " is " + job.getTotalIOTime());
+			System.out.println("The time in ready queue for "+ job.getJobName() + " is " + (job.getTotalIOTime() - arrivalTime[i] - cpuTime[i] - job.getTotalIOTime()));
 			System.out.println("The arrival time for " + job.getJobName() + " is " + arrivalTime[i]);
 			System.out.println("The completion time for " + job.getJobName() + " is " + job.getCompletionTime());
 			i++;
